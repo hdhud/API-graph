@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chart Generator</title>
+    <link rel="icon" type="image/png" href="./img/logo.jpg">
 </head>
 <body>
     <h1>Chart Generator</h1>
     <form id="chartForm" enctype="multipart/form-data">
         <div>
-            <label for="dataFile1">Select Data File 1:</label>
+            <label for="dataFile1">Selectionner le fichier de données:</label>
             <input type="file" id="dataFile1" name="dataFile1" accept=".json">
         </div>
         <div>
-            <label for="dataFile2">Select Data File 2:</label>
+            <label for="dataFile2">Selectionner le fichier pour le graphique:</label>
             <input type="file" id="dataFile2" name="dataFile2" accept=".json">
         </div>
         <button type="submit">Generate Chart</button>
     </form>
-    <img id="chartImage" src="" alt="Chart Image">
+    <img id="chartImage" src="" alt="Chart Image"><br>
+    <button id="download-chart">Télécharger</button>
+    <h1>Upload CSV File</h1>
+    <form id="uploadFormcsv" enctype="multipart/form-data">
+        <input type="file" id="csvFile" name="csvFile">
+        <button type="submit">Upload</button>
+    </form>
+    <h1>Upload SQL File</h1>
+    <form id="uploadFormsql" enctype="multipart/form-data">
+        <input type="file" id="sqlFile" name="sqlFile">
+        <button type="submit">Upload</button>
+    </form>
+    <div id="chartContainer"></div>
+
+    <!-- <img id="img" src="/img/chart_image(3).png" alt="Chart Image"> -->
     <script src="client.js"></script>
 </body>
 </html>

@@ -9,11 +9,15 @@ const upload2 = multer({ dest: 'uploads/' });
 const fs = require('fs');
 const csv = require('csv-parser');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 // Middleware CORS
 app.use(cors());
 app.use(bodyParser.json());
+const publicDirectoryPath = path.join(__dirname, 'public');
 
+// Configurez express pour servir des fichiers statiques à partir du répertoire public
+app.use(express.static(publicDirectoryPath));
 // Endpoint API pour générer le graphique
 app.post('/api/generate-chart', upload.fields([{ name: 'dataFile1', maxCount: 1 }, { name: 'dataFile2', maxCount: 1 }]), (req, res) => {
 
