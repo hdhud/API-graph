@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Generator</title>
+</head>
+<body>
+    <h1>Chart Generator</h1>
+    <form id="chartForm" enctype="multipart/form-data">
+        <div>
+            <label for="dataFile1">Select Data File 1:</label>
+            <input type="file" id="dataFile1" name="dataFile1" accept=".json">
+        </div>
+        <div>
+            <label for="dataFile2">Select Data File 2:</label>
+            <input type="file" id="dataFile2" name="dataFile2" accept=".json">
+        </div>
+        <button type="submit">Generate Chart</button>
+    </form>
+    <img id="chartImage" src="" alt="Chart Image">
+    <script src="client.js"></script>
+</body>
+</html>
