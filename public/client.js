@@ -171,13 +171,3 @@ fetch('modified_data.json')
     // Gestion des erreurs
     console.error('Une erreur s\'est produite : ', error);
 });
-
-
-// const date1 = new Date (2003,3,28,3,4,1)
-// const date2 = new Date (2004,0,1,0,0,1)
-// const date3 = new Date (2005,0,1,0,0,1)
-
-// console.log(((Date.now()-date1)/1000).toFixed(0));
-// console.log(date3-date2);
-
-
